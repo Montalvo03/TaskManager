@@ -2,16 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f3f5; /* Fondo suave */
+    background-image: url('fondo.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija la imagen de fondo */
 }
 
 .container {
-    text-align: center;
+    text-align: center; /* Alinea el contenido del contenedor al centro */
     margin-top: 50px;
-    background-color: #ffffff;
+    background-color: rgba(152, 152, 152, 0.75); /* Cambio de opacidad */
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra debajo del contenedor */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -45,14 +48,25 @@ body {
     display: none;
 }
 
+.complete-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Añadido para separar el cuadrado de la tarea */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 .task-item {
-    position: relative;
+    display: flex; /* Alinea el cuadrado de marcar con el texto de la tarea */
+    align-items: center; /* Centra verticalmente el contenido de la tarea */
     padding: 10px;
     margin: 5px 0;
-    background-color: #ffffff;
+    background-color: rgba(107, 107, 107, 0.5);
     border-radius: 5px;
     transition: opacity 0.5s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra debajo de cada tarea */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .task-item.completed {
@@ -61,22 +75,6 @@ body {
     height: 0;
     padding: 0;
     margin: 0;
-}
-
-.complete-checkbox {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.complete-checkbox.checked {
-    background-color: #aed9e0;
 }
 
 .sidebar {
@@ -90,6 +88,10 @@ body {
 
 .completed-tasks {
     margin-bottom: 20px;
+    background-color: rgba(152, 152, 152, 0.75); /* Cambio de opacidad */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .completed-tasks h2 {
